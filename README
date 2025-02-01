@@ -1,0 +1,17 @@
+# Wajeez - Riyadh Metro System App 🚆  
+
+## Overview  
+Wajeez is a mobile application designed to enhance the Riyadh Metro experience by providing seamless ticketing, train station information, user registration, emergency notifications, and support through in-app messaging.  
+
+## Features  
+✅ **User Registration & Authentication** – Secure sign-up, login, and password reset.  
+✅ **Ticketing System** – Purchase, view, and transfer metro tickets.  
+✅ **Train Stations** – Access detailed information about metro stations and routes.  
+✅ **Emergency Notifications** – Stay informed with critical updates.  
+✅ **User Support** – Send messages for assistance and inquiries.  
+
+## Tech Stack  
+- **Frontend:** FlutterFlow  
+- **Backend:** Supabase  
+- **Authentication:** Supabase Auth  
+- **Database:** Supabase PostgreSQL  
