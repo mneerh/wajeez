@@ -11,13 +11,14 @@ import '/backend/supabase/supabase.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/lat_lng.dart';
 import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -94,53 +95,53 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? HomePageWidget() : SplashWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
+          name: HomePageWidget.routeName,
+          path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
-          name: 'Auth2',
-          path: '/auth2',
+          name: Auth2Widget.routeName,
+          path: Auth2Widget.routePath,
           builder: (context, params) => Auth2Widget(),
         ),
         FFRoute(
-          name: 'profile',
-          path: '/profile',
+          name: ProfileWidget.routeName,
+          path: ProfileWidget.routePath,
           builder: (context, params) => ProfileWidget(),
         ),
         FFRoute(
-          name: 'editInformation',
-          path: '/editInformation',
+          name: EditInformationWidget.routeName,
+          path: EditInformationWidget.routePath,
           builder: (context, params) => EditInformationWidget(),
         ),
         FFRoute(
-          name: 'BuyTickets',
-          path: '/buyTickets',
+          name: BuyTicketsWidget.routeName,
+          path: BuyTicketsWidget.routePath,
           builder: (context, params) => BuyTicketsWidget(),
         ),
         FFRoute(
-          name: 'MyTickets',
-          path: '/myTickets',
+          name: MyTicketsWidget.routeName,
+          path: MyTicketsWidget.routePath,
           builder: (context, params) => MyTicketsWidget(),
         ),
         FFRoute(
-          name: 'Savings',
-          path: '/savings',
+          name: SavingsWidget.routeName,
+          path: SavingsWidget.routePath,
           builder: (context, params) => SavingsWidget(),
         ),
         FFRoute(
-          name: 'ForgotPasswordPage',
-          path: '/forgotPasswordPage',
+          name: ForgotPasswordPageWidget.routeName,
+          path: ForgotPasswordPageWidget.routePath,
           builder: (context, params) => ForgotPasswordPageWidget(),
         ),
         FFRoute(
-          name: 'resetPassword',
-          path: '/resetPassword',
+          name: ResetPasswordWidget.routeName,
+          path: ResetPasswordWidget.routePath,
           builder: (context, params) => ResetPasswordWidget(),
         ),
         FFRoute(
-          name: 'TicketDetails',
-          path: '/ticketDetails',
+          name: TicketDetailsWidget.routeName,
+          path: TicketDetailsWidget.routePath,
           requireAuth: true,
           builder: (context, params) => TicketDetailsWidget(
             currCheck: params.getParam<CheckoutRow>(
@@ -150,13 +151,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'splash',
-          path: '/splash',
+          name: SplashWidget.routeName,
+          path: SplashWidget.routePath,
           builder: (context, params) => SplashWidget(),
         ),
         FFRoute(
-          name: 'ForgotPasswordVerifyOTP',
-          path: '/forgotPasswordVerifyOTP',
+          name: ForgotPasswordVerifyOTPWidget.routeName,
+          path: ForgotPasswordVerifyOTPWidget.routePath,
           builder: (context, params) => ForgotPasswordVerifyOTPWidget(
             enteredEmail: params.getParam(
               'enteredEmail',
@@ -165,8 +166,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'CheckingOut',
-          path: '/CheckingOut',
+          name: CheckingOutWidget.routeName,
+          path: CheckingOutWidget.routePath,
           requireAuth: true,
           builder: (context, params) => CheckingOutWidget(
             currChecking: params.getParam<CheckoutRow>(
@@ -176,8 +177,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Payment',
-          path: '/Payment',
+          name: PaymentWidget.routeName,
+          path: PaymentWidget.routePath,
           requireAuth: true,
           builder: (context, params) => PaymentWidget(
             currCheckout: params.getParam<CheckoutRow>(
@@ -187,58 +188,58 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'changePassword',
-          path: '/changePassword',
+          name: ChangePasswordWidget.routeName,
+          path: ChangePasswordWidget.routePath,
           builder: (context, params) => ChangePasswordWidget(),
         ),
         FFRoute(
-          name: 'thankYou',
-          path: '/thankYou',
+          name: ThankYouWidget.routeName,
+          path: ThankYouWidget.routePath,
           builder: (context, params) => ThankYouWidget(),
         ),
         FFRoute(
-          name: 'all',
-          path: '/all',
+          name: AllWidget.routeName,
+          path: AllWidget.routePath,
           builder: (context, params) => AllWidget(),
         ),
         FFRoute(
-          name: 'Yellow',
-          path: '/Yellow',
+          name: YellowWidget.routeName,
+          path: YellowWidget.routePath,
           builder: (context, params) => YellowWidget(),
         ),
         FFRoute(
-          name: 'notification',
-          path: '/notification',
+          name: NotificationWidget.routeName,
+          path: NotificationWidget.routePath,
           builder: (context, params) => NotificationWidget(),
         ),
         FFRoute(
-          name: 'Purple',
-          path: '/Purple',
+          name: PurpleWidget.routeName,
+          path: PurpleWidget.routePath,
           builder: (context, params) => PurpleWidget(),
         ),
         FFRoute(
-          name: 'red',
-          path: '/red',
+          name: RedWidget.routeName,
+          path: RedWidget.routePath,
           builder: (context, params) => RedWidget(),
         ),
         FFRoute(
-          name: 'Orange',
-          path: '/Orange',
+          name: OrangeWidget.routeName,
+          path: OrangeWidget.routePath,
           builder: (context, params) => OrangeWidget(),
         ),
         FFRoute(
-          name: 'green',
-          path: '/green',
+          name: GreenWidget.routeName,
+          path: GreenWidget.routePath,
           builder: (context, params) => GreenWidget(),
         ),
         FFRoute(
-          name: 'blue',
-          path: '/blue',
+          name: BlueWidget.routeName,
+          path: BlueWidget.routePath,
           builder: (context, params) => BlueWidget(),
         ),
         FFRoute(
-          name: 'myTicketsDetails',
-          path: '/myTicketsDetails',
+          name: MyTicketsDetailsWidget.routeName,
+          path: MyTicketsDetailsWidget.routePath,
           builder: (context, params) => MyTicketsDetailsWidget(
             myticket: params.getParam<TicketRow>(
               'myticket',
@@ -247,8 +248,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'transferTicket',
-          path: '/transferTicket',
+          name: TransferTicketWidget.routeName,
+          path: TransferTicketWidget.routePath,
           builder: (context, params) => TransferTicketWidget(
             myticket: params.getParam<TicketRow>(
               'myticket',
@@ -257,13 +258,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'FAQ',
-          path: '/faq',
+          name: FaqWidget.routeName,
+          path: FaqWidget.routePath,
           builder: (context, params) => FaqWidget(),
         ),
         FFRoute(
-          name: 'liveChat',
-          path: '/liveChat',
+          name: LiveChatWidget.routeName,
+          path: LiveChatWidget.routePath,
           builder: (context, params) => LiveChatWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),

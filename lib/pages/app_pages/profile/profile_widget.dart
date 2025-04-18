@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,6 +15,9 @@ export 'profile_model.dart';
 
 class ProfileWidget extends StatefulWidget {
   const ProfileWidget({super.key});
+
+  static String routeName = 'profile';
+  static String routePath = '/profile';
 
   @override
   State<ProfileWidget> createState() => _ProfileWidgetState();
@@ -148,7 +152,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed('HomePage');
+                                        context.pushNamed(
+                                            HomePageWidget.routeName);
                                       },
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -226,7 +231,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed('BuyTickets');
+                                        context.pushNamed(
+                                            BuyTicketsWidget.routeName);
                                       },
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -304,7 +310,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed('MyTickets');
+                                        context.pushNamed(
+                                            MyTicketsWidget.routeName);
                                       },
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -379,7 +386,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.goNamed('notification');
+                                        context.goNamed(
+                                            NotificationWidget.routeName);
                                       },
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -454,7 +462,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed('profile');
+                                        context
+                                            .pushNamed(ProfileWidget.routeName);
                                       },
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -734,7 +743,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('changePassword');
+                          context.pushNamed(ChangePasswordWidget.routeName);
                         },
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -796,7 +805,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('editInformation');
+                              context
+                                  .pushNamed(EditInformationWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -886,7 +896,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('FAQ');
+                              context.pushNamed(FaqWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -948,7 +958,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('liveChat');
+                          context.pushNamed(LiveChatWidget.routeName);
                         },
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -1011,7 +1021,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.goNamedAuth('splash', context.mounted);
+                          context.goNamedAuth(
+                              SplashWidget.routeName, context.mounted);
                         },
                         text: FFLocalizations.of(context).getText(
                           'ioo8bep2' /* Log Out */,

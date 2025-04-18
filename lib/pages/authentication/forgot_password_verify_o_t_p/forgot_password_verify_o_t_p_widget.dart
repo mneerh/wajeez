@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,6 +19,9 @@ class ForgotPasswordVerifyOTPWidget extends StatefulWidget {
   }) : this.enteredEmail = enteredEmail ?? '';
 
   final String enteredEmail;
+
+  static String routeName = 'ForgotPasswordVerifyOTP';
+  static String routePath = '/forgotPasswordVerifyOTP';
 
   @override
   State<ForgotPasswordVerifyOTPWidget> createState() =>
@@ -34,6 +38,8 @@ class _ForgotPasswordVerifyOTPWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => ForgotPasswordVerifyOTPModel());
+
+    _model.pinCodeFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -64,7 +70,7 @@ class _ForgotPasswordVerifyOTPWidgetState
             size: 30.0,
           ),
           onPressed: () async {
-            context.pushNamed('Auth2');
+            context.pushNamed(Auth2Widget.routeName);
           },
         ),
         actions: [],
@@ -177,6 +183,7 @@ class _ForgotPasswordVerifyOTPWidgetState
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   enableActiveFill: false,
                   autoFocus: true,
+                  focusNode: _model.pinCodeFocusNode,
                   enablePinAutofill: false,
                   errorTextSpace: 16.0,
                   showCursor: true,
@@ -217,14 +224,15 @@ class _ForgotPasswordVerifyOTPWidgetState
                         widget!.enteredEmail,
                       );
                       if (_model.verify == true) {
-                        context.pushNamed('resetPassword');
+                        context.pushNamed(ResetPasswordWidget.routeName);
                       } else {
                         await showDialog(
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
-                              title: Text('Error'),
-                              content: Text('error'),
+                              title: Text('Invalid OTP code'),
+                              content: Text(
+                                  'The entered code in either incorrect or expired. '),
                               actions: [
                                 TextButton(
                                   onPressed: () =>

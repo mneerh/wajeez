@@ -13,6 +13,9 @@ export 'orange_model.dart';
 class OrangeWidget extends StatefulWidget {
   const OrangeWidget({super.key});
 
+  static String routeName = 'Orange';
+  static String routePath = '/Orange';
+
   @override
   State<OrangeWidget> createState() => _OrangeWidgetState();
 }

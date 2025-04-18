@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'forgot_password_verify_o_t_p_widget.dart'
     show ForgotPasswordVerifyOTPWidget;
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -17,6 +18,7 @@ class ForgotPasswordVerifyOTPModel
 
   // State field(s) for PinCode widget.
   TextEditingController? pinCodeController;
+  FocusNode? pinCodeFocusNode;
   String? Function(BuildContext, String?)? pinCodeControllerValidator;
   // Stores action output result for [Custom Action - supabaseVerifyOTP] action in Button-Login widget.
   bool? verify;
@@ -28,6 +30,7 @@ class ForgotPasswordVerifyOTPModel
 
   @override
   void dispose() {
+    pinCodeFocusNode?.dispose();
     pinCodeController?.dispose();
   }
 }

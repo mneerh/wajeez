@@ -13,6 +13,9 @@ export 'yellow_model.dart';
 class YellowWidget extends StatefulWidget {
   const YellowWidget({super.key});
 
+  static String routeName = 'Yellow';
+  static String routePath = '/Yellow';
+
   @override
   State<YellowWidget> createState() => _YellowWidgetState();
 }

@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,6 +19,9 @@ class CheckingOutWidget extends StatefulWidget {
   });
 
   final CheckoutRow? currChecking;
+
+  static String routeName = 'CheckingOut';
+  static String routePath = '/CheckingOut';
 
   @override
   State<CheckingOutWidget> createState() => _CheckingOutWidgetState();
@@ -670,7 +674,7 @@ class _CheckingOutWidgetState extends State<CheckingOutWidget> {
                           );
 
                           context.pushNamed(
-                            'Payment',
+                            PaymentWidget.routeName,
                             queryParameters: {
                               'currCheckout': serializeParam(
                                 _model.checkouttP?.firstOrNull,

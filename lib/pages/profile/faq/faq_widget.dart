@@ -14,6 +14,9 @@ export 'faq_model.dart';
 class FaqWidget extends StatefulWidget {
   const FaqWidget({super.key});
 
+  static String routeName = 'FAQ';
+  static String routePath = '/faq';
+
   @override
   State<FaqWidget> createState() => _FaqWidgetState();
 }

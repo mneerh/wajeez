@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,6 +16,9 @@ export 'my_tickets_model.dart';
 
 class MyTicketsWidget extends StatefulWidget {
   const MyTicketsWidget({super.key});
+
+  static String routeName = 'MyTickets';
+  static String routePath = '/myTickets';
 
   @override
   State<MyTicketsWidget> createState() => _MyTicketsWidgetState();
@@ -135,7 +139,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('HomePage');
+                                      context
+                                          .pushNamed(HomePageWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -212,7 +217,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('BuyTickets');
+                                      context.pushNamed(
+                                          BuyTicketsWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -289,7 +295,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('MyTickets');
+                                      context
+                                          .pushNamed(MyTicketsWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -366,7 +373,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.goNamed('notification');
+                                      context.goNamed(
+                                          NotificationWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -441,7 +449,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('profile');
+                                      context
+                                          .pushNamed(ProfileWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -592,7 +601,7 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
-                                context.goNamed('BuyTickets');
+                                context.goNamed(BuyTicketsWidget.routeName);
                               },
                               text: FFLocalizations.of(context).getText(
                                 '77wl76m7' /* Buy Ticket */,
@@ -740,7 +749,8 @@ class _MyTicketsWidgetState extends State<MyTicketsWidget> {
                                               child: FFButtonWidget(
                                                 onPressed: () async {
                                                   context.pushNamed(
-                                                    'myTicketsDetails',
+                                                    MyTicketsDetailsWidget
+                                                        .routeName,
                                                     queryParameters: {
                                                       'myticket':
                                                           serializeParam(

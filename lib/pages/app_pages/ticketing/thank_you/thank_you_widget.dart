@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,9 @@ export 'thank_you_model.dart';
 
 class ThankYouWidget extends StatefulWidget {
   const ThankYouWidget({super.key});
+
+  static String routeName = 'thankYou';
+  static String routePath = '/thankYou';
 
   @override
   State<ThankYouWidget> createState() => _ThankYouWidgetState();
@@ -80,7 +84,7 @@ class _ThankYouWidgetState extends State<ThankYouWidget> {
                                 size: 24.0,
                               ),
                               onPressed: () async {
-                                context.goNamed('BuyTickets');
+                                context.goNamed(BuyTicketsWidget.routeName);
                               },
                             ),
                           ),
@@ -136,7 +140,7 @@ class _ThankYouWidgetState extends State<ThankYouWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.goNamed('MyTickets');
+                            context.goNamed(MyTicketsWidget.routeName);
                           },
                           text: FFLocalizations.of(context).getText(
                             'srgvgd7d' /* My Tickets */,

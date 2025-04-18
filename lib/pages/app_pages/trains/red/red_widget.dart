@@ -13,6 +13,9 @@ export 'red_model.dart';
 class RedWidget extends StatefulWidget {
   const RedWidget({super.key});
 
+  static String routeName = 'red';
+  static String routePath = '/red';
+
   @override
   State<RedWidget> createState() => _RedWidgetState();
 }

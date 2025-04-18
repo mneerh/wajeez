@@ -12,6 +12,9 @@ export 'all_model.dart';
 class AllWidget extends StatefulWidget {
   const AllWidget({super.key});
 
+  static String routeName = 'all';
+  static String routePath = '/all';
+
   @override
   State<AllWidget> createState() => _AllWidgetState();
 }

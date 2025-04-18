@@ -13,6 +13,9 @@ export 'purple_model.dart';
 class PurpleWidget extends StatefulWidget {
   const PurpleWidget({super.key});
 
+  static String routeName = 'Purple';
+  static String routePath = '/Purple';
+
   @override
   State<PurpleWidget> createState() => _PurpleWidgetState();
 }

@@ -13,6 +13,9 @@ export 'green_model.dart';
 class GreenWidget extends StatefulWidget {
   const GreenWidget({super.key});
 
+  static String routeName = 'green';
+  static String routePath = '/green';
+
   @override
   State<GreenWidget> createState() => _GreenWidgetState();
 }

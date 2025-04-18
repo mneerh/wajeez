@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,9 @@ export 'notification_model.dart';
 
 class NotificationWidget extends StatefulWidget {
   const NotificationWidget({super.key});
+
+  static String routeName = 'notification';
+  static String routePath = '/notification';
 
   @override
   State<NotificationWidget> createState() => _NotificationWidgetState();
@@ -121,7 +125,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('HomePage');
+                                      context
+                                          .pushNamed(HomePageWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -198,7 +203,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('BuyTickets');
+                                      context.pushNamed(
+                                          BuyTicketsWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -275,7 +281,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('MyTickets');
+                                      context
+                                          .pushNamed(MyTicketsWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -350,7 +357,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.goNamed('notification');
+                                      context.goNamed(
+                                          NotificationWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -423,7 +431,8 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('profile');
+                                      context
+                                          .pushNamed(ProfileWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,

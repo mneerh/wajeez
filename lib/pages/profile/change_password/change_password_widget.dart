@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +15,9 @@ export 'change_password_model.dart';
 
 class ChangePasswordWidget extends StatefulWidget {
   const ChangePasswordWidget({super.key});
+
+  static String routeName = 'changePassword';
+  static String routePath = '/changePassword';
 
   @override
   State<ChangePasswordWidget> createState() => _ChangePasswordWidgetState();
@@ -250,7 +254,8 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                         await authManager.signOut();
                         GoRouter.of(context).clearRedirectLocation();
 
-                        context.pushNamedAuth('Auth2', context.mounted);
+                        context.pushNamedAuth(
+                            Auth2Widget.routeName, context.mounted);
                       } else {
                         await showDialog(
                           context: context,

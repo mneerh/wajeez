@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +17,9 @@ export 'live_chat_model.dart';
 
 class LiveChatWidget extends StatefulWidget {
   const LiveChatWidget({super.key});
+
+  static String routeName = 'liveChat';
+  static String routePath = '/liveChat';
 
   @override
   State<LiveChatWidget> createState() => _LiveChatWidgetState();
@@ -382,7 +386,7 @@ class _LiveChatWidgetState extends State<LiveChatWidget> {
                             },
                           );
 
-                          context.goNamed('profile');
+                          context.goNamed(ProfileWidget.routeName);
 
                           safeSetState(() {});
                         },

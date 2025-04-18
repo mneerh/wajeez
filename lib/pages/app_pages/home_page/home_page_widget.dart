@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -14,6 +15,9 @@ export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({super.key});
+
+  static String routeName = 'HomePage';
+  static String routePath = '/homePage';
 
   @override
   State<HomePageWidget> createState() => _HomePageWidgetState();
@@ -115,7 +119,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('HomePage');
+                                    context.pushNamed(HomePageWidget.routeName);
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -185,7 +189,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('BuyTickets');
+                                    context
+                                        .pushNamed(BuyTicketsWidget.routeName);
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -258,7 +263,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('MyTickets');
+                                    context
+                                        .pushNamed(MyTicketsWidget.routeName);
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -328,7 +334,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.goNamed('notification');
+                                    context
+                                        .goNamed(NotificationWidget.routeName);
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -398,7 +405,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('profile');
+                                    context.pushNamed(ProfileWidget.routeName);
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -616,7 +623,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('all');
+                context.pushNamed(AllWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -637,7 +644,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('blue');
+                context.pushNamed(BlueWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -658,7 +665,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('red');
+                context.pushNamed(RedWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -679,7 +686,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('Orange');
+                context.pushNamed(OrangeWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -700,7 +707,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('Yellow');
+                context.pushNamed(YellowWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -721,7 +728,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('green');
+                context.pushNamed(GreenWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
@@ -742,7 +749,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('Purple');
+                context.pushNamed(PurpleWidget.routeName);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),

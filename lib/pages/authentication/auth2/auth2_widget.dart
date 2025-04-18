@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -16,6 +17,9 @@ export 'auth2_model.dart';
 
 class Auth2Widget extends StatefulWidget {
   const Auth2Widget({super.key});
+
+  static String routeName = 'Auth2';
+  static String routePath = '/auth2';
 
   @override
   State<Auth2Widget> createState() => _Auth2WidgetState();
@@ -39,6 +43,7 @@ class _Auth2WidgetState extends State<Auth2Widget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
+
     _model.firstNameCreateTextController ??= TextEditingController();
     _model.firstNameCreateFocusNode ??= FocusNode();
 
@@ -1236,7 +1241,8 @@ class _Auth2WidgetState extends State<Auth2Widget>
                                                               });
 
                                                               context.goNamedAuth(
-                                                                  'HomePage',
+                                                                  HomePageWidget
+                                                                      .routeName,
                                                                   context
                                                                       .mounted);
                                                             } else {
@@ -1699,7 +1705,8 @@ class _Auth2WidgetState extends State<Auth2Widget>
                                                             }
 
                                                             context.goNamedAuth(
-                                                                'HomePage',
+                                                                HomePageWidget
+                                                                    .routeName,
                                                                 context
                                                                     .mounted);
                                                           },
@@ -1772,7 +1779,8 @@ class _Auth2WidgetState extends State<Auth2Widget>
                                                         child: FFButtonWidget(
                                                           onPressed: () async {
                                                             context.pushNamed(
-                                                                'ForgotPasswordPage');
+                                                                ForgotPasswordPageWidget
+                                                                    .routeName);
                                                           },
                                                           text: FFLocalizations
                                                                   .of(context)

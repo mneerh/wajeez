@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -14,6 +15,9 @@ export 'splash_model.dart';
 
 class SplashWidget extends StatefulWidget {
   const SplashWidget({super.key});
+
+  static String routeName = 'splash';
+  static String routePath = '/splash';
 
   @override
   State<SplashWidget> createState() => _SplashWidgetState();
@@ -173,7 +177,7 @@ class _SplashWidgetState extends State<SplashWidget>
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        context.goNamed('Auth2');
+                        context.goNamed(Auth2Widget.routeName);
                       },
                       text: FFLocalizations.of(context).getText(
                         'lrfhopx8' /* Get Started */,

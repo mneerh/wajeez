@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +13,9 @@ export 'forgot_password_page_model.dart';
 
 class ForgotPasswordPageWidget extends StatefulWidget {
   const ForgotPasswordPageWidget({super.key});
+
+  static String routeName = 'ForgotPasswordPage';
+  static String routePath = '/forgotPasswordPage';
 
   @override
   State<ForgotPasswordPageWidget> createState() =>
@@ -60,7 +64,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
             size: 30.0,
           ),
           onPressed: () async {
-            context.pushNamed('Auth2');
+            context.pushNamed(Auth2Widget.routeName);
           },
         ),
         actions: [],
@@ -256,7 +260,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       await Future.delayed(const Duration(milliseconds: 1000));
 
                       context.pushNamed(
-                        'ForgotPasswordVerifyOTP',
+                        ForgotPasswordVerifyOTPWidget.routeName,
                         queryParameters: {
                           'enteredEmail': serializeParam(
                             _model.emailAddressTextController.text,

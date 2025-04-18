@@ -13,6 +13,9 @@ export 'blue_model.dart';
 class BlueWidget extends StatefulWidget {
   const BlueWidget({super.key});
 
+  static String routeName = 'blue';
+  static String routePath = '/blue';
+
   @override
   State<BlueWidget> createState() => _BlueWidgetState();
 }

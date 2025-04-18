@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,9 @@ export 'edit_information_model.dart';
 
 class EditInformationWidget extends StatefulWidget {
   const EditInformationWidget({super.key});
+
+  static String routeName = 'editInformation';
+  static String routePath = '/editInformation';
 
   @override
   State<EditInformationWidget> createState() => _EditInformationWidgetState();
@@ -116,7 +120,7 @@ class _EditInformationWidgetState extends State<EditInformationWidget> {
                       size: 24.0,
                     ),
                     onPressed: () async {
-                      context.goNamed('profile');
+                      context.goNamed(ProfileWidget.routeName);
                     },
                   ),
                 ],
@@ -497,7 +501,7 @@ class _EditInformationWidgetState extends State<EditInformationWidget> {
                             ),
                           );
 
-                          context.goNamed('profile');
+                          context.goNamed(ProfileWidget.routeName);
                         },
                         text: FFLocalizations.of(context).getText(
                           '7gv2g5r6' /* Save */,
