@@ -1,0 +1,35 @@
+workflows:
+  flutterflow_ci_cd:
+    name: FlutterFlow CI/CD with Tests
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: "*"
+          include: true
+    environment:
+      flutter: stable
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+
+      - name: Run Functional Tests
+        script: |
+          flutter test
+
+      - name: Run Non-Functional Tests
+        script: |
+          flutter analyze
+
+    artifacts:
+      - build/**/outputs/**/*.apk
+
+    publishing:
+      email:
+        recipients:
+          - mnalsaeed0@gmail.com
+        notify:
+          success: true
+          failure: true
