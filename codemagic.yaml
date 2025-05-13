@@ -11,16 +11,9 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Install dependencies
-        script: flutter pub get
-
-      - name: Run Functional Tests
-        script: flutter test
-        continue-on-error: true
-
-      - name: Run Non-Functional Tests
-        script: flutter analyze
-        continue-on-error: true
+      - flutter pub get
+      - flutter test
+      - flutter analyze
 
     artifacts:
       - build/**/outputs/**/*.apk
