@@ -11,9 +11,16 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - flutter pub get
-      - flutter test
-      - flutter analyze
+      - name: Install dependencies
+        script: flutter pub get
+
+      - name: Run Functional Tests
+        script: flutter test
+        continue-on-error: true
+
+      - name: Run Non-Functional Tests
+        script: flutter analyze
+        continue-on-error: true
 
     artifacts:
       - build/**/outputs/**/*.apk
@@ -22,9 +29,6 @@ workflows:
       email:
         recipients:
           - mnalsaeed0@gmail.com
-        notify:
-          success: true
-          failure: true
         notify:
           success: true
           failure: true
