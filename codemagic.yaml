@@ -1,0 +1,29 @@
+workflows:
+  flutterflow_ci_cd:
+    name: FlutterFlow CI/CD with Tests
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: "*"
+          include: true
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter test
+      - name: Run analyzer (allow warnings)
+        script: |
+          flutter analyze || echo "Analyzer warnings found, but continuing"
+
+    artifacts:
+      - build/**/outputs/**/*.apk
+
+    publishing:
+      email:
+        recipients:
+          - mnalsaeed0@gmail.com
+        notify:
+          success: true
+          failure: true
