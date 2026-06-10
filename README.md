@@ -12,6 +12,9 @@ Wajeez simplifies metro commuting by providing passengers with easy access to ti
 
 The system focuses on improving accessibility, convenience, and user experience while maintaining security and reliability.
 
+## Application Overview
+
+![Wajeez Application Overview](application_overview.png)
 ---
 
 ## Key Features
