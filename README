@@ -10,7 +10,7 @@ Wajeez is a mobile application designed to enhance the Riyadh Metro experience b
 ✅ **Emergency Notifications** – Stay informed with critical updates.  
 ✅ **User Support** – Send messages for assistance and inquiries.  
 
-## Tech Stack  
+## Tech Stack
 - **Frontend:** FlutterFlow  
 - **Backend:** Supabase  
 - **Authentication:** Supabase Auth  
